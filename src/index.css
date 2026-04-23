@@ -1,0 +1,34 @@
+@import "tailwindcss";
+
+@theme {
+  --color-pixl-navy: #0a1628;
+  --color-pixl-dark: #0d1f3c;
+  --color-pixl-blue: #1e88e5;
+  --color-pixl-cyan: #00d4ff;
+  --color-pixl-accent: #4fc3f7;
+  --color-pixl-surface: #122044;
+  --color-pixl-card: #162a52;
+  --color-pixl-text: #e8edf5;
+  --color-pixl-muted: #8da4c4;
+  --color-pixl-success: #00e676;
+  --color-pixl-glow: rgba(0, 212, 255, 0.15);
+}
+
+body {
+  margin: 0;
+  background: var(--color-pixl-navy);
+  color: var(--color-pixl-text);
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  overflow: hidden;
+}
+
+@keyframes shimmer {
+  0% { background-position: -200% 0; }
+  100% { background-position: 200% 0; }
+}
+
+.shimmer {
+  background: linear-gradient(90deg, transparent 0%, rgba(0,212,255,0.08) 50%, transparent 100%);
+  background-size: 200% 100%;
+  animation: shimmer 2s infinite;
+}
